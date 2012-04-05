@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Scorecard by dmondark</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Scorecard</h1>
+<p>Display your Code School courses and badges on your site</p>
+        <p class="view"><a href="https://github.com/dmondark/scorecard">View the Project on GitHub <small>dmondark/scorecard</small></a></p>
+        <ul>
+          <li><a href="https://github.com/dmondark/scorecard/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dmondark/scorecard/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dmondark/scorecard">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Scorecard is a jQuery plugin that lets you show off your <a href="http://www.codeschool.com">Code School</a>'s completed and/or in-progress courses as well as earned badges.</p>
+
+<h2>Demo!</h2>
+
+<p>Soon.</p>
+
+<h2>Installation</h2>
+
+<ol>
+<li>Clone/Download <code>jquery-scorecard.min.js</code> somewhere in your project.</li>
+<li>Include a recent version of jQuery and Scorecard in <code>&lt;head&gt;</code>:</li>
+</ol><div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"<a href="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js</a>"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"jquery-scorecard.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<h2>Usage</h2>
+
+<p>Scorecard will append an unordered list inside the specified element for each
+of the three sections (completed courses, in-progress courses and badges). For
+example:</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"my-cs-badges"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>My Code School Bages<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+...
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#my-cs-badges).scorecard({</span>
+<span class="s1">    username: '</span><span class="nx">dmondark</span><span class="s1">',</span>
+<span class="s1">    sections: ['</span><span class="nx">badges</span><span class="s1">'],</span>
+<span class="s1">    loading:</span>
+<span class="s1">      message: '</span><span class="nx">Loading</span> <span class="nx">Code</span> <span class="nx">School</span> <span class="nx">bages</span><span class="p">...</span><span class="err">'</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<h2>Configuration</h2>
+
+<p>A hash of options can be passed to scorecards as below:</p>
+
+<ul>
+<li>
+<code>username</code>: Your code school username (This is required)</li>
+<li>
+<code>sections</code>: An 1-3 elements array of the sections to be rendered possible
+values are: 'completed', 'in-progress' and/or 'badges' (default: All)</li>
+<li>
+<code>newtab</code>: Whether clicking on a course/badge will open the link in a new tab
+(default: false)</li>
+<li>
+<code>loading.message</code>: The text displayed while the badges are being loaded
+(default "Loading...")</li>
+<li>
+<code>loading.id</code>: The ID assigned to the <p> element that wraps the loading message
+(default "load-message")</p>
+</li>
+</ul><h2>Styling</h2>
+
+<p>Scorecard tries to be non-intrusive and will not add any classes or ids to the
+markup it is generating. Element hierarchy can instead be used to style any of
+the child elements if needs be.
+For the example above, to set an opacity of .5 to the badges on hover, a sample
+css selector would look something like:</p>
+
+<div class="highlight">
+<pre><span class="nf">#my-cs-badges</span> <span class="o">&gt;</span> <span class="nt">ul</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">a</span> <span class="o">&gt;</span> <span class="nt">img</span><span class="nd">:hover</span><span class="p">{</span>
+  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+
+<h2>Thanks</h2>
+
+<p>Many thanks to the good guys at Code School for the help with the API.</p>
+
+<p>Also thanks to Mihail Szabolcs (<a href="https://twitter.com/theicebreaker">@theicebreaker</a>)
+for writing <a href="https://github.com/icebreaker/proudify">Proudify</a> which was the main
+inspiration behind Scorecard.</p>
+
+<p>This plugin was jump-started with Zeno Rocha's <a href="https://github.com/zenorocha/jquery-boilerplate">jquery-boilerplate</a></p>
+
+<h2>Disclaimer</h2>
+
+<p>This is my very first CoffeeScript project as well as my first jQuery plugin,
+therefore there bound to be things that I'm doing wrong and/or obviously missing.</p>
+
+<p>If you have an idea about a feature or a better and more obvious way to do
+something, please help by forking the repo, doing your magic and sending a pull
+request (using a feature branch would be superb). Thanks!</p>
+
+<h2>License</h2>
+
+<p>Copyright (c) 2012, Ali B. (<a href="http://awhitebox.com">http://awhitebox.com</a>)</p>
+
+<p>Scorecards is provided under the MIT license. For more information see LICENSE.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/dmondark">dmondark</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
