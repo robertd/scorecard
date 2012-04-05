@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Scorecard by dmondark</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/scorecard.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://raw.github.com/dmondark/scorecard/master/jquery-scorecard.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Scorecard</h1>
+<p>Display your Code School courses and badges on your site</p>
+        <p class="view"><a href="https://github.com/dmondark/scorecard">View the Project on GitHub <small>dmondark/scorecard</small></a></p>
+        <ul>
+          <li><a href="https://github.com/dmondark/scorecard/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dmondark/scorecard/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="index.html">Back To <strong>Home</strong></a></li>
+        </ul>
+      </header>
+      <section>
+
+<h2>My Code School Progress</h2>
+<h3>Completed Courses</h3>
+<div id="cs-completed" class="cs-section group">
+  <p>All the courses that I've aced!</p>
+</div>
+
+<h3>Courses In Progress</h3>
+<div id="cs-in-progress" class="cs-section group">
+  <p>Working on them...</p> 
+</div>
+
+<h3>Awarded Badges</h3>
+<div id="cs-badges" class="cs-section group">
+  <p>You can't really get enough of those!</p>
+</div>
+
+<script type="text/javascript">
+  $('#cs-completed').scorecard({
+    username: 'dmondark',
+    sections: ['completed'],
+  });
+  $('#cs-in-progress').scorecard({
+    username: 'dmondark',
+    sections: ['in-progress'],
+  });
+  $('#cs-badges').scorecard({
+    username: 'dmondark',
+    sections: ['badges'],
+  });
+</script>
+
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/dmondark">dmondark</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>

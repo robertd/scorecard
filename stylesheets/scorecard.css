@@ -1,0 +1,47 @@
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+
+.group:after {
+    clear:both;
+}
+
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.cs-section {
+  margin-bottom: 20px;
+}
+.cs-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left:0;
+  margin-right:0;
+}
+
+.cs-section li {
+  margin: 5px;
+  float:left;
+}
+
+.cs-section li a {
+  border:none;
+}
+
+.cs-section img {
+  width: 100px;
+  height: 100px;
+  border: 0;
+  border-radius:45px;
+  box-shadow:none;
+  border-radius:0;
+}
+
+.cs-section img:hover {
+    opacity: 0.7;
+}
+
+
