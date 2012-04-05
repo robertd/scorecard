@@ -4,15 +4,17 @@ Scorecard is a jQuery plugin that lets you show off your [Code School](http://ww
 
 #Demo!
 
-Soon.
+A demo page is available [here](http://dmondark.github.com/scorecard/demo.html).
 
 ##Installation
 
 1. Clone/Download `jquery-scorecard.min.js` somewhere in your project.
 2. Include a recent version of jQuery and Scorecard in `<head>`:
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery-scorecard.min.js"></script>
+```html
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-scorecard.min.js"></script>
+```
 
 ##Usage
 
@@ -26,7 +28,7 @@ example:
 </div>
 ...
 <script type="text/javascript">
-  $('#my-cs-badges).scorecard({
+  $('#my-cs-badges').scorecard({
     username: 'dmondark',
     sections: ['badges'],
     loading:
